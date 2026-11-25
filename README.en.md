@@ -2,12 +2,12 @@
 
 # Piercer Clipbase — Snippet & Prompt Vault
 
-Cofre de snippets, comandos, respostas rápidas e prompts com variáveis dinâmicas
+vault of snippets, comandos, respostas fast and prompts with dynamic variables
 
 ## Features
 
-- **Main Sections**: Novo Snippet
-- **Available Actions**: Exportar JSON, + Novo Snippet, Excluir, Cancelar, Salvar
+- **Main Sections**: new Snippet
+- **Available Actions**: export JSON, + new Snippet, delete, Cancelar, save
 - **Auto-Save**: automatically persists changes in the browser (`localStorage`).
 - **Multi-Language**: built-in language switcher (`PT / EN / ES`).
 

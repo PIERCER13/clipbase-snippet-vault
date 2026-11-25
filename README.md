@@ -18,6 +18,8 @@ Cofre de snippets, comandos, respostas rápidas e prompts com variáveis dinâmi
 
 ## Arquivos do Projeto
 
+- `.git`
+- `.gitattributes`
 - `app.js`
 - `index.html`
 - `README.md`

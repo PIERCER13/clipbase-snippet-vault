@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="piercer" />
+  <title>Piercer Clipbase — Snippet & Prompt Vault</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Piercer Clipbase — Snippet &amp; Prompt Vault</h1>
+      <p class="subtitle">Cofre de snippets, comandos, respostas rápidas e prompts com variáveis dinâmicas</p>
+    </div>
+    <div class="top-actions">
+      <button type="button" class="btn btn-ghost" id="btnExport">Exportar JSON</button>
+      <label class="btn btn-ghost">Importar JSON<input type="file" id="inputImport" accept=".json" hidden /></label>
+      <button type="button" class="btn btn-primary" id="btnNew">+ Novo Snippet</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar card">
+      <div class="field">
+        <label for="searchInput">Buscar (/)</label>
+        <input type="search" id="searchInput" placeholder="Título, conteúdo ou #tag..." />
+      </div>
+      <div class="cat-label">Categorias</div>
+      <div id="catList" class="cat-list"></div>
+      <div class="cat-label" style="margin-top:12px;">Histórico de Cópias</div>
+      <div id="historyList" class="history-list"></div>
+    </aside>
+
+    <section class="content">
+      <div id="varBar" class="card var-bar hidden">
+        <div class="var-head">
+          <strong>Variáveis Dinâmicas Detectadas</strong>
+          <span class="subtitle">Preencha para substituir antes de copiar</span>
+        </div>
+        <div id="varInputs" class="var-inputs"></div>
+      </div>
+
+      <div id="snippetGrid" class="snippet-grid"></div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop hidden" id="editModal">
+    <div class="modal-card card">
+      <div class="modal-head">
+        <h2 id="modalTitle">Novo Snippet</h2>
+        <button type="button" class="btn btn-ghost" id="btnCloseModal">✕</button>
+      </div>
+      <form id="snippetForm" class="form-col">
+        <input type="hidden" id="fId" />
+        <div class="row-2">
+          <div class="field">
+            <label for="fTitle">Título</label>
+            <input type="text" id="fTitle" required placeholder="Ex: Resposta Suporte PIX" />
+          </div>
+          <div class="field">
+            <label for="fCat">Categoria</label>
+            <input type="text" id="fCat" required placeholder="Ex: Suporte, Dev, Prompts" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="fTags">Tags (separadas por vírgula)</label>
+          <input type="text" id="fTags" placeholder="sql, deploy, atendimento" />
+        </div>
+        <div class="field">
+          <label for="fBody">Conteúdo (use {{variavel}} ou {{data}})</label>
+          <textarea id="fBody" rows="7" required placeholder="Olá {{cliente}}, seu pedido #{{id}} foi atualizado em {{data}}!"></textarea>
+        </div>
+        <div class="modal-foot">
+          <button type="button" class="btn btn-danger" id="btnDelete">Excluir</button>
+          <div style="display:flex;gap:8px;">
+            <button type="button" class="btn btn-ghost" id="btnCancel">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copiado!</div>
+  <script src="./app.js"></script>
+  <script src='../piercer_i18n.js'></script>
+</body>
+</html>

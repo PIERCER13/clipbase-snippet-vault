@@ -1,0 +1,29 @@
+> **[Versão em Português](./README.md)**
+
+# Piercer Clipbase — Snippet & Prompt Vault
+
+Cofre de snippets, comandos, respostas rápidas e prompts com variáveis dinâmicas
+
+## Features
+
+- **Main Sections**: Novo Snippet
+- **Available Actions**: Exportar JSON, + Novo Snippet, Excluir, Cancelar, Salvar
+- **Auto-Save**: automatically persists changes in the browser (`localStorage`).
+- **Multi-Language**: built-in language switcher (`PT / EN / ES`).
+
+## How to Run
+
+1. Run `start.bat` to start the local server on port `8114`, or open `index.html` directly in your browser.
+2. Open `http://localhost:8114`.
+
+## Project Files
+
+- `app.js`
+- `index.html`
+- `README.md`
+- `start.bat`
+- `styles.css`
+- `README.en.md`
+
+---
+Author: **piercer**

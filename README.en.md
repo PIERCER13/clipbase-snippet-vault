@@ -22,6 +22,7 @@ vault of snippets, comandos, respostas fast and prompts with dynamic variables
 - `.gitattributes`
 - `app.js`
 - `index.html`
+- `piercer_i18n.js`
 - `README.md`
 - `start.bat`
 - `styles.css`

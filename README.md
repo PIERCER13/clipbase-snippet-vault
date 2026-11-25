@@ -22,6 +22,7 @@ Cofre de snippets, comandos, respostas rápidas e prompts com variáveis dinâmi
 - `.gitattributes`
 - `app.js`
 - `index.html`
+- `piercer_i18n.js`
 - `README.md`
 - `start.bat`
 - `styles.css`
